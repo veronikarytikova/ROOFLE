@@ -3,6 +3,4 @@ import thunk from 'redux-thunk';
 import { rootReducer } from './reducers/rootReducer';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-export type TDispatch = typeof store.dispatch;
-
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
